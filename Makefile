@@ -34,7 +34,7 @@ $(BUILD_DIR)/static/communities/%.png: art/communities/%.png
 	$(COMMUNITIES_CONVERT) $< $@
 
 $(BUILD_DIR)/static/main.css: src/main.less
-	lessc -x $< > $@
+	lessc -x $< $@
 
 $(BUILD_DIR)/%.html: render.py src/data.json src/%.html
 	./render.py src/data.json $*.html > $@
